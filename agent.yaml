@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: container-base-image-cadence-auditor
+version: 0.1.0
+description: Review container base-image age and declared patch cadence.
+skills:
+  - container-base-image-cadence-auditor-skill
+tools:
+  - review-container-base-image-cadence-auditor
+tags:
+  - developer-tools
+  - evidence-driven

@@ -1,0 +1,5 @@
+{
+  "image_reference": "evidence-record",
+  "base_image_release_date": "2026-10-03",
+  "patch_cadence_days": 1
+}

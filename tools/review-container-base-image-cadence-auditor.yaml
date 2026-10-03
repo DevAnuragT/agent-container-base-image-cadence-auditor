@@ -1,0 +1,54 @@
+{
+  "name": "review-container-base-image-cadence-auditor",
+  "description": "Run Container Base Image Cadence Auditor",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "image_reference": {
+            "type": "string",
+            "description": "image reference"
+          },
+          "base_image_release_date": {
+            "type": "string",
+            "description": "base image release date"
+          },
+          "patch_cadence_days": {
+            "type": "number",
+            "description": "patch cadence days"
+          }
+        },
+        "required": [
+          "image_reference",
+          "base_image_release_date",
+          "patch_cadence_days"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-container-base-image-cadence-auditor.py",
+    "runtime": "python3"
+  }
+}

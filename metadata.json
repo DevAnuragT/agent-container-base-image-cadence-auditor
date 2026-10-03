@@ -1,0 +1,24 @@
+{
+  "slug": "container-base-image-cadence-auditor",
+  "title": "Container Base Image Cadence Auditor",
+  "category": "developer-tools",
+  "description": "Review container base-image age and declared patch cadence.",
+  "fields": {
+    "image_reference": {
+      "label": "image reference",
+      "kind": "required",
+      "minimum": 0
+    },
+    "base_image_release_date": {
+      "label": "base image release date",
+      "kind": "date",
+      "minimum": 0
+    },
+    "patch_cadence_days": {
+      "label": "patch cadence days",
+      "kind": "number",
+      "minimum": 1
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
